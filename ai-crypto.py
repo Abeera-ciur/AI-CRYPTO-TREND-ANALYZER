@@ -66,7 +66,7 @@ class MarketData:
     @classmethod
     def _get_exchange(cls) -> ccxt.Exchange:
         if cls._exchange is None:
-            cls._exchange = ccxt.okx({
+            cls._exchange = ccxt.binance
                 "enableRateLimit": True,
                 "options": {"defaultType": "spot"},
                 **({"apiKey": BINANCE_API_KEY, "secret": BINANCE_API_SECRET}
